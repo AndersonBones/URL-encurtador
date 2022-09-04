@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    </head>
+    <body>
+
+        <div class="container ">
+            <%- include('../partials/logo'); %>
+            
+            <div class="m-auto d-flex flex-column align-content-start  shortnerUrl text-center mt-5">
+                <div class="infoResult text-start ps-5">
+                    <h2>Sua URL encurtada</h2>
+                    <p>Copie o link encurtado e compartilhe em mensagens, textos, publicações, sites e outros locais.</p>
+                </div>
+                
+                <div id="formurl" class="d-flex justify-content-center mt-4">
+                    <input id="shortenurl" type="text" value="<%=shortnerUrl%>" onclick="this.select();">
+                    <button class="btn btn-primary" id="formbutton" type="submit">Copiar URL <i class="bi bi-clipboard2"></i></button>
+                </div>
+
+                <div class="OriginalUlr-info text-start ps-5 mt-4">
+                    <p class="mb-2">URL Longa: <a href="<%=url%>"><%=url%></a></p>
+
+                    <p>Acompanhe o <a href="<%=code%>/stats">total de cliques</a> em tempo real da sua URL encurtada.</p>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </body>
+</html>

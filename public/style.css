@@ -1,0 +1,46 @@
+
+.original_url-area, #formurl{
+    height: 50px;
+}
+
+#title{
+    font-size: 3rem;
+}
+
+#formurl input{
+    width: 220px;
+}
+
+#formurl input{
+    padding: .4rem !important;
+}
+
+.original_url-area input{
+    width: 500px;
+}
+
+.original_url-area input, #shortenurl{
+    border-radius: 0 !important;
+    border: 2px solid rgb(130, 156, 180);
+    border-end-start-radius: .8rem !important;
+    border-start-start-radius: .8rem !important;
+    border-right: none;
+
+    padding-left: 1rem;
+    outline: none;
+
+}
+
+.original_url-area button, #formbutton{
+    border-radius: 0 !important;
+    border-end-end-radius: .8rem !important;
+    border-start-end-radius: .8rem !important; 
+
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.original_url-area button > i{
+    font-size: 1.2rem;
+}
+
