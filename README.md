@@ -15,4 +15,4 @@ Encurtador de url
 <img src="/public/images/screen.gif" alt="">
 
 ### Demo
-<a href="https://stark-hamlet-49985.herokuapp.com/">Live Demo</a>
+<a href="https://mysterious-scrubland-96819.herokuapp.com/">Live Demo</a>
