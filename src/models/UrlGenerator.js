@@ -1,4 +1,5 @@
-const GenerateCode = ()=>{
+
+const GenerateCode = () =>{
     let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijkolmnopqrstuvwxyz1234567890'
     let code = '';
 

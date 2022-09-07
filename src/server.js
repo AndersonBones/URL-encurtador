@@ -16,7 +16,7 @@ dotenv.config()
 app.use(cors(corsOptions))
 
 // set mongodb
-mongoose.connect('mongodb://localhost:27017/URL')
+mongoose.connect(process.env.dbURL)
 
 let db = mongoose.connection;
 
