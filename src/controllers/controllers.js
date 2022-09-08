@@ -2,7 +2,7 @@ const Url = require('../models/UrlModel')
 const UrlGenerator = require('../models/UrlGenerator')
 
 const home = (req, res)=>{
-    res.render('pages/home')
+    res.render('pages/Home')
 }
 
 async function newUrl(req, res){
@@ -21,7 +21,7 @@ async function newUrl(req, res){
             }).save();
 
             let shortnerUrl = process.env.URL + newUlr.code;
-            res.render('pages/result',{shortnerUrl, url, click, code})
+            res.render('pages/Result',{shortnerUrl, url, click, code})
 
         } catch (error) {
             
@@ -63,7 +63,7 @@ async function getStats(req, res){
             let doc = await Url.findOne({code})
 
             if(doc){
-                res.render('pages/stats', {click: doc.click})
+                res.render('pages/Stats', {click: doc.click})
             }
             else{
                 res.status(404).render('pages/404')
@@ -78,14 +78,14 @@ async function getStats(req, res){
 }
 
 async function getClicks(req, res){
-    let code = req.body.shortnerUrl.slice(process.env.URL.length-5);
+    let code = req.body.shortnerUrl.slice(process.env.URL.length);
 
     if(code){
         try {
             let doc = await Url.findOne({code})
 
             if(doc){
-                res.redirect(`/${code}/stats`)
+                res.redirect(`/${code}/Stats`)
                             
             }else{
                 res.status(404).render('pages/404')
@@ -102,6 +102,6 @@ async function getClicks(req, res){
 }
 
 const Clicks = (req, res)=>{
-    res.render('pages/clicks')
+    res.render('pages/Clicks')
 }
 module.exports = {home, newUrl, shortnerUrl, getStats, getClicks, Clicks    }
