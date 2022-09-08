@@ -28,8 +28,5 @@
     "express": "^4.18.1",
     "mongoose": "^6.5.4",
     "nodemon": "^2.0.19"
-  },
-  "devDependencies": {
-    "copyfiles": "^2.4.1"
   }
 }
