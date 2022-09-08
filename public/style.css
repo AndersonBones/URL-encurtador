@@ -1,5 +1,7 @@
 /* HOME */ 
-
+:root{
+    --primary:#046cb3;
+}
 #title{
     font-size: 3.3rem !important;
 }
@@ -53,6 +55,11 @@ a{
 
 
 .links{
-    position: absolute;
+    position: fixed;
     bottom: 0vh;
+    background-color: var(--primary) !important;
+}
+
+.btn-pri{
+    background-color: var(--primary) !important;
 }

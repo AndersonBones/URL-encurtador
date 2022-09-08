@@ -6,4 +6,4 @@ const urlSchema = new mongoose.Schema({
     click:{type:Number, default:0}
 })
 
-module.exports = mongoose.model('url', urlSchema)
+module.exports = mongoose.model('link', urlSchema)

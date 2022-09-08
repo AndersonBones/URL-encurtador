@@ -26,16 +26,19 @@
             
             <form action="/New" method="post" class="home-form d-flex justify-content-center">
                 <input  type="text" name="url" placeholder="Cole o link aqui" required>
-                <button id="post-url" class="btn btn-primary d-flex flex-row align-items-center" type="submit">Encurtar <i class="bi bi-link"></i></button>
+                <button class="btn-pri btn btn-primary d-flex flex-row align-items-center" type="submit">Encurtar <i class="bi bi-link"></i></button>
             </form>
 
-            <div class="home-info text-center mt-5">
-                <p>O Encurtador de URL permite diminuir um link longo tornando-o fácil de lembrar</p>
+            <div class="home-info text-center mt-5 mb-5">
+                <p class="mb-3">O Encurtador de URL permite diminuir um link longo tornando-o fácil de lembrar</p>
                 <p>Após encurtar a URL, é possível saber <a class="link" href="/clicks">quantos cliques ela recebeu</a></p>
             </div>
+
+            
         </div>
 
         <%-include("../partials/footer"); %>
+
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     </body>
