@@ -24,7 +24,7 @@ async function newUrl(req, res){
             res.render('pages/Result',{shortnerUrl, url, click, code})
 
         } catch (error) {
-            
+            console.log(error.message)
         }
 
     }
@@ -48,7 +48,7 @@ async function shortnerUrl(req, res, next){
             
         } catch (error) {
             res.render('pages/404')
-        
+            console.log(error.message)
         }
     }else{
         
@@ -71,6 +71,7 @@ async function getStats(req, res){
             
         } catch (error) {
             res.status(404).render('pages/404', {error})
+            console.log(error.message)   
         }
     }else{
        
@@ -92,6 +93,7 @@ async function getClicks(req, res){
             }
         } catch (error) {
             res.status(404).render('pages/404', {error, body:req.body})
+            console.log(error.message)
         }
     }else{
         res.status(404).render('pages/404')
