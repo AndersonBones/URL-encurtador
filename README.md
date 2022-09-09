@@ -1,9 +1,6 @@
 # URL-encurtador
 
-Encurtador de url
-
-### Pré-requisitos globais:
-`npm install nodemon copyfiles` 
+Encurtador de URL
 
 ### Instalação:
 `npm install`
