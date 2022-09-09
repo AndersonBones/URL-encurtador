@@ -38,6 +38,6 @@ app.use((req, res)=>{
     res.render('pages/404')
 });
 
-app.listen(process.env.PORT || 21059, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log('Server running...')
   });
