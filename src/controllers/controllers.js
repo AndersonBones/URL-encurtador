@@ -2,7 +2,7 @@ const Url = require('../models/UrlModel')
 const UrlGenerator = require('../models/UrlGenerator')
 
 const home = (req, res)=>{
-    res.render('pages/Home')
+    res.render('pages/home')
 }
 
 async function newUrl(req, res){
