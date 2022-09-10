@@ -21,7 +21,7 @@ async function newUrl(req, res){
             }).save();
 
             let shortnerUrl = process.env.APP_URL + newUlr.code;
-            res.render('pages/Result',{shortnerUrl, url, click, code})
+            res.render('pages/result',{shortnerUrl, url, click, code})
 
         } catch (error) {
             console.log(error.message)
@@ -63,7 +63,7 @@ async function getStats(req, res){
             let doc = await Url.findOne({code})
 
             if(doc){
-                res.render('pages/Stats', {click: doc.click})
+                res.render('pages/stats', {click: doc.click})
             }
             else{
                 res.status(404).render('pages/404')
@@ -86,7 +86,7 @@ async function getClicks(req, res){
             let doc = await Url.findOne({code})
 
             if(doc){
-                res.redirect(`/${code}/Stats`)
+                res.redirect(`/${code}/stats`)
                             
             }else{
                 res.status(404).render('pages/404')
@@ -104,6 +104,6 @@ async function getClicks(req, res){
 }
 
 const Clicks = (req, res)=>{
-    res.render('pages/Clicks')
+    res.render('pages/clicks')
 }
 module.exports = {home, newUrl, shortnerUrl, getStats, getClicks, Clicks    }
