@@ -12,7 +12,7 @@ dotenv.config()
 app.use(cors())
 
 // set mongodb
-mongoose.connect(process.env.dbURL)
+mongoose.connect(process.env.MONGO_URL)
 
 let db = mongoose.connection;
 

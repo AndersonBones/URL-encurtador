@@ -20,7 +20,7 @@ async function newUrl(req, res){
                 click
             }).save();
 
-            let shortnerUrl = process.env.URL + newUlr.code;
+            let shortnerUrl = process.env.APP_URL + newUlr.code;
             res.render('pages/Result',{shortnerUrl, url, click, code})
 
         } catch (error) {
@@ -79,7 +79,7 @@ async function getStats(req, res){
 }
 
 async function getClicks(req, res){
-    let code = req.body.shortnerUrl.slice(process.env.URL.length);
+    let code = req.body.shortnerUrl.slice(process.env.APP_URL.length);
 
     if(code){
         try {
