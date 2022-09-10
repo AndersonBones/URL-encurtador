@@ -12,4 +12,4 @@ Encurtador de URL
 <img src="/public/images/screen.gif" alt="">
 
 ### Demo
-<a href="https://linkzin.net/">Live Demo</a>
+<a href="https://linkzin-shortner.herokuapp.com">Live Demo</a>
