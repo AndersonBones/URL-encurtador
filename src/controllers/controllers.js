@@ -47,8 +47,7 @@ async function shortnerUrl(req, res, next){
             }
             
         } catch (error) {
-            res.render('pages/404')
-            console.log(error.message)
+            res.status(404).render('pages/404')
         }
     }else{
         
@@ -70,8 +69,7 @@ async function getStats(req, res){
             }
             
         } catch (error) {
-            res.status(404).render('pages/404', {error})
-            console.log(error.message)   
+            res.status(404).render('pages/404', {error}) 
         }
     }else{
        
@@ -93,17 +91,14 @@ async function getClicks(req, res){
             }
         } catch (error) {
             res.status(404).render('pages/404', {error, body:req.body})
-            console.log(error.message)
         }
     }else{
         res.status(404).render('pages/404')
     }
-    
 
-    
 }
 
 const Clicks = (req, res)=>{
     res.render('pages/clicks')
 }
-module.exports = {home, newUrl, shortnerUrl, getStats, getClicks, Clicks    }
+module.exports = {home, newUrl, shortnerUrl, getStats, getClicks, Clicks}
