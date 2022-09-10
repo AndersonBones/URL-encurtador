@@ -5,15 +5,11 @@ const mongoose = require('mongoose')
 const Myroutes = require('./routes/routes');
 var cors = require('cors')
 
-var corsOptions = {
-    origin:process.env.URL ,
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
 
 const app = express();
 dotenv.config()
 
-app.use(cors(corsOptions))
+app.use(cors())
 
 // set mongodb
 mongoose.connect(process.env.dbURL)
