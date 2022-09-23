@@ -4,6 +4,7 @@ const router = express.Router();
 
 
 router.get('/', Controllers.home)
+router.get("/invalid-url", Controllers.invalidUrl)
 router.get('/clicks', Controllers.Clicks)
 router.get('/:code',Controllers.shortnerUrl)
 router.get('/:code/stats', Controllers.getStats)

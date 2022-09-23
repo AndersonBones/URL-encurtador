@@ -19,11 +19,11 @@ async function newUrl(req, res){
         let url = new URL(req.body.url)
         let shortnerUrl = process.env.APP_URL + newUrl.code;
         let newUlr = data.save();
-        
+
         res.render('pages/result',{shortnerUrl, url, click, code})
         
       } catch(err) {
-        res.status(400).render('pages/invalidUrl')
+        res.status(400).redirect('/invalid-url')
       }
 
 
@@ -87,5 +87,10 @@ async function getClicks(req, res){
 
 const Clicks = (req, res)=>{
     res.render('pages/clicks')
+}
+
+
+const invalidUrl = (req, res) =>{
+    res.render('pages/invalidUrl')
 }
 module.exports = {home, newUrl, shortnerUrl, getStats, getClicks, Clicks}
