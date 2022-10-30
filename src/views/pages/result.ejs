@@ -15,14 +15,14 @@
     </head>
     <body>
 
-        <div class="container d-flex flex-column justify-content-center align-items-center">
+        <main class="container d-flex flex-column justify-content-center align-items-center">
             <%- include('../partials/logo'); %>
             
             <div class="d-flex flex-column align-content-start row shortnerUrl text-center mt-5">
-                <div class="infoResult text-center ">
+                <article class="infoResult text-center ">
                     <h2>Sua URL encurtada</h2>
                     <p>Copie o link encurtado e compartilhe em mensagens, textos, publicações, sites e outros locais.</p>
-                </div>
+                </article>
                 
                 <div class="result-form d-flex justify-content-center mt-4">
                     
@@ -36,7 +36,7 @@
                     <p>Acompanhe o <a href="<%=code%>/stats">total de cliques</a> em tempo real da sua URL encurtada.</p>
                 </div>
             </div>
-        </div>
+        </main>
 
         <%-include("../partials/footer"); %>
 

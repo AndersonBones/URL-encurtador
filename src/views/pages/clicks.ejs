@@ -15,12 +15,12 @@
     </head>
     <body>
 
-        <div class="container">
+        <main class="container">
             <%- include('../partials/logo'); %>
-            <div class="info text-center mt-5 mb-5">
+            <article class="info text-center mt-5 mb-5">
                 <h2 class="mb-3" >Contador de Cliques da URL</h2>
                 <span class="h5 text-muted">Digite a URL curta abaixo para descobrir quantos cliques ela recebeu até agora.</span>
-            </div>
+            </article>
             
             
             <form action="/Clicks" method="post" class="clicks-form mb-5 d-flex justify-content-center">
@@ -30,7 +30,7 @@
         
             
             <p class="text-center">* Acompanhe o total de acessos da URL encurtada em tempo real, não precisa se registrar.</p>
-        </div>
+        </main>
 
         <%-include("../partials/footer"); %>
         

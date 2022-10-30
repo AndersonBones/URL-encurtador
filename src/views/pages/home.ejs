@@ -4,7 +4,17 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Linkzin</title>
+        <title>Encurtador de URL</title>
+        
+        <meta name="description" content="Linkzin é um encurtador de URL usado para encurtar longos endereços de sites. Com o Linkzin é possível diminuir o tamanho do link criando uma url curta para compartilhar em outros locais, além de monitorar estatísticas de tráfego.">
+        <meta name="keywords" content="Linkzin, linkzin, Encurtador, encurtador, linkzin encurtador, encurtador de link, encurtar link">
+        <meta property="og:title" content="Linkzin - Encurtador de URL">
+        <meta property="og:url" content="https://linkzin.net/">
+        <meta property="og:site_name" content="Linkzin">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="/images/pngegg.png">
+        <meta name="author" content="Anderson Bones">
+        <meta name="copyright" content="© 2022  Anderson Bones" />
 
         <link rel="icon" type="image/png" href="/images/pngegg.png"/>
 
@@ -17,7 +27,7 @@
     </head>
     <body>
 
-        <div class="container">
+        <main class="container">
             <%- include('../partials/logo'); %>
             <div class="info text-center mt-4 mb-4">
                 <span class="h5 text-muted">Cole a URL para ser encurtada</span>
@@ -29,13 +39,13 @@
                 <button class="btn-pri btn btn-primary d-flex flex-row align-items-center" type="submit">Encurtar <i class="bi bi-link"></i></button>
             </form>
 
-            <div class="home-info text-center mt-5 mb-5">
+            <article class="home-info text-center mt-5 mb-5">
                 <p class="mb-3">O Encurtador de URL permite diminuir um link longo tornando-o fácil de lembrar</p>
                 <p>Após encurtar a URL, é possível saber <a class="link" href="/clicks">quantos cliques ela recebeu</a></p>
-            </div>
+            </article>
 
             
-        </div>
+        </main>
 
         <%-include("../partials/footer"); %>
 
