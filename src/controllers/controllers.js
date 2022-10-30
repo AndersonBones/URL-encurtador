@@ -17,7 +17,7 @@ async function newUrl(req, res){
 
     try {
         let url = new URL(req.body.url)
-        let shortnerUrl = process.env.APP_URL + newUrl.code;
+        let shortnerUrl = process.env.APP_URL + code;
         let newUlr = data.save();
 
         res.render('pages/result',{shortnerUrl, url, click, code})
