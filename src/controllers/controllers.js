@@ -1,5 +1,5 @@
 const Url = require('../models/linkzinModel')
-const UrlGenerator = require('../models/linkzin')
+const UrlGenerator = require('../service/linkzin')
 
 const home = (req, res)=>{
     res.render('pages/home')
