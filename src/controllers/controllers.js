@@ -25,9 +25,6 @@ async function newUrl(req, res){
       } catch(err) {
         res.status(400).redirect('/invalid-url')
       }
-
-
-
 }
 
 
