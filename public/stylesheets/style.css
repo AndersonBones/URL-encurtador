@@ -55,7 +55,8 @@ a{
 
 
 .links{
-    
+    position:fixed;
+    bottom:0vh;
     background-color: var(--primary) !important;
 }
 
