@@ -5,20 +5,20 @@ const home = (req, res)=>{
     res.render('pages/home')
 }
 
-async function newUrl(req, res){
-    let code = UrlGenerator.GenerateCode();
-    let click = 0;
+async function newUrl(req, res){ // cria um novo link encurtado 
+    let code = UrlGenerator.GenerateCode(); // gera um código aleatório 
+    let click = 0; // contador de cliques
 
-    let data = await new Url({
-        code,
-        url:req.body.url,
-        click
+    let data = await new Url({ // objeto URL
+        code, // código
+        url:req.body.url, // 
+        click // quantidade de cliques
     })
 
     try {
         let url = new URL(req.body.url)
-        let shortnerUrl = `${process.env.APP_URL}/${code}`;
-        let newUlr = data.save();
+        let shortnerUrl = `${process.env.APP_URL}/${code}`; // cria a url encurtada
+        let newUlr = data.save(); // salva os dados no banco
 
         res.render('pages/result',{shortnerUrl, url, click, code})
         
@@ -32,13 +32,13 @@ async function shortnerUrl(req, res, next){
     let code = req.params.code;
 
     try {
-        let doc = await Url.findOneAndUpdate({code}, {$inc:{click:1}})
+        let doc = await Url.findOneAndUpdate({code}, {$inc:{click:1}}) // incrimenta em 1 a contagem dos cliques 
 
-        if(doc){
+        if(doc){ // redireciona o usuário para o link encurtado
             res.redirect(doc.url);
         }
-        else{
-            res.status(404).render('pages/404')
+        else{ 
+            res.status(404).render('pages/404') // redireciona para a página de erro caso nâo encontre o codigo no banco de dados
         }
         
     } catch (error) {
