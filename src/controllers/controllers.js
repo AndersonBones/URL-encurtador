@@ -66,6 +66,7 @@ async function getStats(req, res){
 
 async function getClicks(req, res){
     let code = req.body.shortnerUrl.slice(process.env.DOMAIN.length);
+    console.log(code);
 
     try {
         let doc = await Url.findOne({code})
