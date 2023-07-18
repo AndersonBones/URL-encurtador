@@ -91,4 +91,12 @@ const Clicks = (req, res)=>{
 const invalidUrl = (req, res) =>{
     res.render('pages/invalidUrl')
 }
-module.exports = {home, newUrl, shortnerUrl, getStats, getClicks, Clicks, invalidUrl}
+module.exports = {
+    home, 
+    newUrl, 
+    shortnerUrl, 
+    getStats, 
+    getClicks, 
+    Clicks, 
+    invalidUrl
+}
