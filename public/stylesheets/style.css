@@ -55,11 +55,19 @@ a{
 
 
 .links{
-    /*position:fixed;*/
-    /*bottom:0vh;*/
+    position:fixed;
+    bottom:0vh;
     background-color: var(--primary) !important;
 }
 
 .btn-pri{
     background-color: var(--primary) !important;
+}
+
+
+body{
+    height: 100vh;;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
 }
