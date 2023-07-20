@@ -54,9 +54,12 @@ a{
 }
 
 
+main{
+    height: 93.8vh;
+}
+
 .links{
-    position:fixed;
-    bottom:0vh;
+    
     background-color: var(--primary) !important;
 }
 
@@ -64,10 +67,3 @@ a{
     background-color: var(--primary) !important;
 }
 
-
-body{
-    height: 100vh;;
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-}
