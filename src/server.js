@@ -14,7 +14,7 @@ app.use(cors())
 // set mongodb
 mongoose.connect(process.env.MONGO_URL)
 
-let db = mongoose.connection;
+let db = mongoose.connection; // instancia de conexão do banco
 
 db.on("error",()=>{
     console.log('Houve um erro')
