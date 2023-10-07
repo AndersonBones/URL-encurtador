@@ -19,7 +19,7 @@ async function newUrl(req, res){ // cria um novo link encurtado
 
     try {
         let url = new URL(req.body.url)
-        let shortnerUrl = `${process.env.DOMAIN}/${code}`; // cria a url encurtada
+        let shortnerUrl = `${process.env.DOMAIN}${code}`; // cria a url encurtada
         let newUlr = data.save(); // salva os dados no banco
 
         res.render('pages/result',{shortnerUrl, url, click, code})
