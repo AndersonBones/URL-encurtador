@@ -1,5 +1,7 @@
 const Url = require('../models/linkzinModel')
 const UrlGenerator = require('../service/generateCode')
+const dotenv = require('dotenv');
+dotenv.config();
 
 const home = (req, res)=>{
     res.render('pages/home')
