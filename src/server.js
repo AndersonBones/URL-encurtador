@@ -34,6 +34,6 @@ app.use((req, res)=>{
     res.render('pages/404')
 });
 
-app.listen(8080, function(){
+app.listen(3333, function(){
     console.log('Server running...')
   });
