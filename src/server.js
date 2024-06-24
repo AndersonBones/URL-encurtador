@@ -12,7 +12,9 @@ dotenv.config()
 app.use(cors())
 
 // set mongodb
-mongoose.connect(process.env.MONGO_URL)
+
+mongo_url = "mongodb+srv://abones22:mydb24112001666@cluster0.amfoksf.mongodb.net/?retryWrites=true&w=majority"
+mongoose.connect(mongo_url)
 
 let db = mongoose.connection; // instancia de conexão do banco
 
